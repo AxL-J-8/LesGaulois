@@ -32,7 +32,8 @@ public class Romain {
 	} 
 	public static void main(String[] args) {
 		Romain minus= new Romain("Minus",6);
-
+		System.out.println(Equipement.CASQUE);
+        System.out.println(Equipement.BOUCLIER);
 
 
 	}

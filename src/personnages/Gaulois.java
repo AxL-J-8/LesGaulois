@@ -20,7 +20,7 @@ public class Gaulois  {
 	} 
     public void boirPotion(int forcePotion) {
     	effetPotion=forcePotion;
-    	parler("Merci Druide, je sens que ma force est "+ effetPotion +" fois d√©cupl√©e. ");
+    	parler("Merci Druide, je sens que ma force est "+ effetPotion +" fois dÈcuplÈe. ");
     }
 	public void frapper(Romain romain) { 
 		System.out.println(nom + " envoie un grand coup dans la m√¢choire de " + romain.getNom()); 
