@@ -19,7 +19,7 @@ public class Village {
 		}
 	}
 	public Gaulois trouverHabitant(int numVillageois) {
-
+    
 		return villageois[numVillageois-1];
 	}
 	public void afficherVillageois() {
@@ -38,14 +38,11 @@ public class Village {
 	public static void main(String[] args) {
 		Village village1=new Village("Village des Irréductible",30);
 		Chef abraracourcix = new Chef("Abraracourcix",10,village1);
-		Gaulois obélix = new Gaulois("Obélix",8);
+		Gaulois obélix = new Gaulois("Obélix",25);
 		Gaulois asterix = new Gaulois("Asterix",8);
 		village1.ajouterHabitant(obélix);
 		village1.ajouterHabitant(asterix);
 		village1.setChef(abraracourcix);
-		// Gaulois gaulois1 = village.trouverHabitant(30);
-		Gaulois gaulois = village1.trouverHabitant(0);
-		//System.out.println(gaulois);
 		village1.afficherVillageois();
 		
 	}
