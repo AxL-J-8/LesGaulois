@@ -9,12 +9,12 @@ public class Scenario {
 	public static void main(String[] args) {
 		Druide panoramix= new Druide("Panoramix", 5, 10);
 		Gaulois asterix= new Gaulois("Asterix",3);
-		Gaulois obelix= new Gaulois("ObÃ©lix",3);
+		Gaulois obelix= new Gaulois("Obélix",3);
 		Romain minus= new Romain("Minus",18);
-		panoramix.parler("Je vais aller prÃ©parer une petite potion...");
+		panoramix.parler("Je vais aller préparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
-		obelix.parler("Par BÃ©lÃ©nos, ce n'est pas juste !");
+		obelix.parler("Par Bélénos, ce n'est pas juste !");
 		panoramix.booster(asterix);
 		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
