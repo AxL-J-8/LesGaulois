@@ -5,8 +5,8 @@ public class Gaulois  {
 	private String nom; 
 	private int force; 
 	private int effetPotion = 1; 
-	private int nb_trophees; 
-	private Equipement trophees[] = new Equipement[100];
+	private int nbTrophees; 
+	private Equipement[] trophees = new Equipement[100];
 	public Gaulois(String nom, int force) { 
 		this.nom = nom; 
 		this.force = force; 
@@ -22,12 +22,11 @@ public class Gaulois  {
 	//	} 
 
 	private String prendreParole() { 
-		String texte = "Le gaulois " + nom + " : "; 
-		return texte; 
+		return "Le gaulois " + nom + " : "; 
 	}
 	public void boirPotion(int forcePotion) {
 		effetPotion=forcePotion;
-		parler("Merci Druide, je sens que ma force est "+ effetPotion +" fois décuplée. ");
+		parler("Merci Druide, je sens que ma force est "+ effetPotion +" fois dï¿½cuplï¿½e. ");
 	}
 	//	public void frapper(Romain romain) { 
 	//		System.out.println(nom + " envoie un grand coup dans la mÃ¢choire de " + romain.getNom()); 
@@ -35,19 +34,17 @@ public class Gaulois  {
 	//	} 
 
 	public void frapper(Romain romain) { 
-		System.out.println(nom  +  "  envoie  un  grand  coup  dans la mâchoire de " + romain.getNom()); 
-				Equipement  trophees[]  =  romain.recevoirCoup((force  /  3)  * 
-						effetPotion); 
-		for  (int  i  =  0;  trophees  !=  null  &&  i  <  trophees.length;  i++, 
-				nb_trophees++) { 
-			this.trophees[nb_trophees] = trophees[i]; 
+		System.out.println(nom  +  "  envoie  un  grand  coup  dans la mï¿½choire de " + romain.getNom()); 
+				Equipement[] tropheesGagner  =  romain.recevoirCoup((force  /  3)  * effetPotion); 
+		for  (int  i  =  0;  tropheesGagner  !=  null  &&  i  <  tropheesGagner.length;  i++, 
+				nbTrophees++) { 
+			this.trophees[nbTrophees] = tropheesGagner[i]; 
 		} 
-		return; 
+
 	}
 	@Override 
 	public String toString() { 
-		return "Gaulois [nom=" + nom + ", force=" + force 
-				+ ", effetPotion=" + effetPotion + "]"; 
+		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]"; 
 	} 
 	public static void main(String[] args) {
 		Gaulois asterix= new Gaulois("Asterix",3);
