@@ -57,14 +57,13 @@ public class Romain {
 		//  parler("J'abandonne..."); 
 		//  } 
 
-		switch (force) { 
-		case 0: 
-			parler("A�e"); 
-			break;
-		default: 
+	    if(force>0) {
+	    	
+			parler("A�e");
+	    }
+	    else { 
 			equipementEjecte = ejecterEquipement(); 
 			parler("J'abandonne..."); 
-			break; 
 		} 
 		// post condition la force � diminuer 
 		assert force < oldForce; 
@@ -128,6 +127,7 @@ public class Romain {
 				equipements[i] = null; 
 			} 
 		} 
+		nbEquipement-=nbEquipementEjecte;
 		return equipementEjecte; 
 	} 
 	
